@@ -24,12 +24,14 @@ Usage
 Browser Compatibility
 =====================
 
-IE 8+<br />
-Firefox<br />
-Chrome<br />
-Safari<br />
-Opera<br />
-Most mobile browsers
+  <ul>
+    <li>IE 8+</li>
+    <li>Firefox</li>
+    <li>Chrome</li>
+    <li>Safari</li>
+    <li>Opera</li>
+    <li>Most mobile browsers</li>
+  </ul>
 
 
 Author
