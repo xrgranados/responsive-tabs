@@ -1,5 +1,5 @@
-Responsive Tabs v1.2
-====================
+Responsive Tabs v1.2.1
+======================
 
 A simple to use, alternative, lightweight and responsive jQuery Tabs plugin.
 
