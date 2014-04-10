@@ -1,20 +1,23 @@
-//	Responsive Tabs v1.2.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
-//	=========================================================================================
+//	Responsive Tabs v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	=======================================================================================
 
 	// Tabs function
-		function jQueryTabs() {
+		function responsiveTabs() {
 			// Tabs functionality
-				$('.tabs').each(function(e) {
+				$('.responsive-tabs').each(function(e) {
 					// Hide all tab panels except for the first
-						$('.tabs-panel').not(':first').hide();
+						$('.responsive-tabs-panel').not(':first').hide();
 
 					// Add active statuses to first tab and show display
 						$('li', this).removeClass('active');
 						$('li:first-child', this).addClass('active');
-						$('.tabs-panel:first-child').show();
+						$('.responsive-tabs-panel:first-child').show();
 
 					// Tab clicked
 						$('li', this).click(function(e) {
+							// Prevent the anchor's default click action
+								e.preventDefault();
+
 							// Corresponding tabs panel
 								var panel = $('a', this).attr('href');
 
@@ -29,27 +32,23 @@
 
 							// Showing the clicked tabs' panel
 								$(panel).fadeIn(400);
-
-							// Prevent the anchor's default click action
-								e.preventDefault();
 						});
 
 					// Responsive
-						if ($(window).width() < 768) {
-							$('.tabs-panel').show();
-						}
+						if ($(window).width() < 768)
+							$('.responsive-tabs-panel').show();
 				});
 
 			// Panel link functionality
-				$('.tabs-content .tabs-panel .tabs-panel-link').click(function(e) {
+				$('.responsive-tabs-content .responsive-tabs-panel .responsive-tabs-panel-link').on('click', function(e) {
 					// Corresponding tabs panel
 						var panel = $(this).attr('href');
 
 					// Remove active statuses to other tabs
-						$(this).parents('.tabs-content').siblings('.tabs').find('a[href=' + panel + ']').parent().siblings().removeClass('active');
+						$(this).parents('.responsive-tabs-content').siblings('.responsive-tabs').find('a[href=' + panel + ']').parent().siblings().removeClass('active');
 
 					// Add active status to this tab
-						$(this).parents('.tabs-content').siblings('.tabs').find('a[href=' + panel + ']').parent().addClass('active');
+						$(this).parents('.responsive-tabs-content').siblings('.responsive-tabs').find('a[href=' + panel + ']').parent().addClass('active');
 
 					// Hide other tab panels
 						$(panel).siblings().hide();
@@ -63,19 +62,16 @@
 		}
 
 	$(document).ready(function() {
-		// Execute
-			jQueryTabs();
+		responsiveTabs();
 
-		// Prepend tab titles to panels
-			$('.tabs li a').each(function() {
-				var	tabID		=	$(this).attr('href');
-				var	tabTitle	=	$(this).html();
+		$('.responsive-tabs li a').each(function() {
+			var	tabID = $(this).attr('href');
+			var	tabTitle = $(this).html();
 
-				$(tabID + ' .tab-title').prepend('<p><strong>' + tabTitle + '</strong></p>');
-			});
+			$(tabID + ' .responsive-tab-title').prepend('<p><strong>' + tabTitle + '</strong></p>');
+		});
 	});
 
 	$(window).resize(function() {
-		// Execute
-			jQueryTabs();
+		responsiveTabs();
 	});
