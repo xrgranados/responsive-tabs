@@ -1,4 +1,4 @@
-Responsive Tabs v1.3
+Responsive Tabs v1.4
 ====================
 
 A simple to use, alternative, lightweight and responsive jQuery Tabs plugin.
@@ -10,12 +10,12 @@ Usage
 =====
 
 <ul>
-  <li>Link both the responsive-tabs.css and responsive-tabs.js files into your document</li>
+  <li>Link both the 'responsive-tabs.css' and 'responsive-tabs.js' files into your document</li>
   <li>Place an unordered list and give it a class name 'responsive-tabs'</li>
   <li>In each list item place a hyperlink</li>
   <li>Give the hyperlinks 'href' attribute a _unique_ anchor</li>
   <li>Place a div after your unordered list with a class name 'responsive-tabs-content'</li>
-  <li>Inside that div place another div with a class name 'tabs-panel'</li>
+  <li>Inside that div place another div with a class name 'responsive-tabs-panel'</li>
   <li>Place a 'responsive-tabs-panel' div for each of the list items using the unique 'href' as that div's 'id' attribute</li>
 </ul>
 

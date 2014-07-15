@@ -1,4 +1,4 @@
-//	Responsive Tabs v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Responsive Tabs v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	=======================================================================================
 
 	// Tabs function
